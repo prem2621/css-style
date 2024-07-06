@@ -1,0 +1,67 @@
+body{
+    background: linear-gradient(90deg,rgb(3, 3, 105),skyblue,rgb(4, 4, 146));
+}
+img{
+    height: 300px;
+    width: 200px;
+    position: absolute;
+    border: 5px dotted black;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container{
+    height: 320px;
+    width: 200px;
+    position: relative;
+    margin-top:15% ;
+    margin-left: 40%;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg)rotateZ(-20deg);
+    animation: ror 20s linear infinite;
+}
+@keyframes ror {
+    50%{
+        transform: rotateX(30deg);
+    }
+    80%{
+        transform: rotateX(-30deg);
+    }
+}
+
+.images{
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotate 20s linear infinite;
+}
+@keyframes rotate {
+    from{
+
+    }
+    to{
+        transform: rotatey(360deg);
+    }
+}
+img:nth-child(1){
+    transform: rotateY(60deg)translateZ(300px);
+}
+img:nth-child(2){
+    transform: rotateY(120deg)translateZ(300px);
+}
+img:nth-child(3){
+    transform: rotateY(180deg)translateZ(300px);
+}
+img:nth-child(4){
+    transform: rotateY(240deg)translateZ(300px);
+}
+img:nth-child(5){
+    transform: rotateY(300deg)translateZ(300px);
+}
+img:nth-child(6){
+    transform: rotateY(360deg)translateZ(300px);
+}
+img:hover{
+    width: 220px;
+height: 340px;
+cursor: pointer;
+}
